@@ -49,8 +49,6 @@ export const loadRecipe = async function (id) {
     if (state.bookmarks.some(bookmark => bookmark.id === id))
       state.recipe.bookmarked = true;
     else state.recipe.bookmarked = false;
-
-    console.log(recipe);
   } catch (err) {
     //   Temp error handling
     console.error(`${err} 💣💣`);
@@ -127,7 +125,6 @@ const init = function () {
 };
 
 init();
-console.log(state.bookmarks);
 
 const clearBookmarks = function () {
   localStorage.clear('bookmarks');
